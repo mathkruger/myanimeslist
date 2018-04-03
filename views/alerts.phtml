@@ -1,0 +1,13 @@
+<?php if (ALERT::check('Error')): ?>
+<div class="container">
+    <div class="card-panel">
+      <span class="blue-text text-darken-2">ERROR: <?=ALERT::get('Error')?></span>
+    </div>
+</div>
+<?php endif; if (ALERT::check('Success')): ?>
+<div class="container">
+    <div class="card-panel">
+      <span class="blue-text text-darken-2">SUCESSS: <?=ALERT::get('Success')?></span>
+    </div>
+</div>
+<?php endif; ?>

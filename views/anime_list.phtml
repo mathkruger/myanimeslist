@@ -1,0 +1,31 @@
+ <section class="section">
+    <div class="container">
+        <h2 class="title">
+            My Animes
+        </h2>
+
+        <div class="columns is-multiline">
+            <?php foreach ($this->results as $result) { ?>
+                <div class="column is-3">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                            <img src=<?= '"'.$result['cover_link'].'"' ?> alt="Placeholder image" class="image is-128x128">
+                            </figure>
+                        </div>
+                        <div class="card-content"><?= $result['title'] ?></p>
+                            <div class="content">
+                                <?= $result['description'] ?>
+                            </div>
+                        </div>
+
+                        <div class="card-div">
+                            <a href=<?='"/edit.php?id='. $result['id'] .'"'?> class="card-footer-item">Edit</a>
+                            <a href=<?='"/delete.php?id='. $result['id'] .'"'?> class="card-footer-item">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+</section>

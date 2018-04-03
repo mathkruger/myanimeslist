@@ -1,0 +1,32 @@
+ <section class="section">
+    <div class="container">
+        <h2 class="title">
+            Delete anime
+        </h2>
+        <p class="subtitle">
+            Are you sure?
+        </p>
+
+        <div class="columns is-multiline" style="justify-content: center;">
+            <div class="column is-3">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-square">
+                            <img src=<?= '"'.$this->anime['cover_link'].'"' ?> alt="Placeholder image" class="image is-128x128">
+                        </figure>
+                    </div>
+                    <div class="card-content"><?= $this->anime['title'] ?></p>
+                        <div class="content">
+                            <?= $this->anime['description'] ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <form method="post">
+            <button class="button is-danger">Yes</button>
+            <a href="index.php" class="button is-success">No</a>
+        </form>
+    </div>
+</section>
